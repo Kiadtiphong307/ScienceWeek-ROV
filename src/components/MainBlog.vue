@@ -10,8 +10,13 @@
             />
           </a>
         </div>
-        <div class="text-center text-xl font-bold mt-4">Boss</div>
+        <div class="text-center text-xl font-bold mt-4">Boss net</div>
       </div>
     </div>
+    <footer class="text-center text-xl font-bold mt-4">
+      ติดต่อสอบถามรายละเอียดได้ที่ผู้ประสานงานฝ่ายการแข่งขัน  นางสาวช่อทิพย์  สิทธิ 053-873890 ต่อ 25 หรือ
+inbox  ทางเพจ วิทยาการคอมพิวเตอร์  ม.แม่โจ้
+
+    </footer>
   </main>
 </template>
