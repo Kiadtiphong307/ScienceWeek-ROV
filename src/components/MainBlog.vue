@@ -10,7 +10,7 @@
             />
           </a>
         </div>
-        <div class="text-center text-xl font-bold mt-4">Boss net</div>
+        <div class="text-center text-xl font-bold mt-4">Boss net สววัดีครัีบ</div>
       </div>
     </div>
     <footer class="text-center text-xl font-bold mt-4">
