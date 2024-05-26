@@ -7,3 +7,9 @@ import Menu from '@/components/MenuBar.vue'
   <Menu />
   <RouterView />
 </template>
+
+<style>
+body {
+  background-color: linear-gradient(to top left, var(--tw-gradient-stops));
+}
+</style>

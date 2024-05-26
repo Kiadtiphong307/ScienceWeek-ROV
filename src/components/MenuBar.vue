@@ -3,11 +3,13 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu } from '@headlessui
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
 const navigation = [
-  { name: 'รายละเอียดผการแข่งขัน', href: '/', current: true },
-  
-  { name: 'ติดต่อ', href: '/Contact', current: false },
+  { name: 'รายละเอียดการแข่งขัน', href: '/', current: true },
 
-  { name: 'อัพโหลดแบบฟอร์ม', href: '#', current: false }
+  { name: 'อัพโหลดแบบฟอร์ม', href: '#', current: false },
+
+  { name: 'ประกาศรายชื่อทีม', href: '/Team', current: false },
+
+  { name: 'ติดต่อ', href: '/Contact', current: false }
 ]
 </script>
 
@@ -18,7 +20,7 @@ const navigation = [
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
           <DisclosureButton
-            class="relative inline-flex items-center justify-center  p-2 text-gray-400 hover:bg-gray-700 hover:text-white"
+            class="relative inline-flex items-center justify-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white"
           >
             <span class="absolute -inset-0.5" />
             <span class="sr-only">Open main menu</span>
@@ -28,10 +30,7 @@ const navigation = [
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
-            <img
-              class="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-            />
+            <img class="h-10 w-auto" src="../assets/LOGO.png" />
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
@@ -40,7 +39,7 @@ const navigation = [
                 :key="item.name"
                 :href="item.href"
                 :class="[
-                  'text-black hover:bg-gray-700 hover:text-white',
+                  'text-black hover:bg-blue-500 hover:text-white hover:scale-75 transition duration-500 ease-in-out',
                   'rounded-md px-3 py-2 text-lg font-medium '
                 ]"
                 :aria-current="item.current ? 'page' : undefined"
@@ -53,9 +52,11 @@ const navigation = [
           class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
         >
           <button
-            class="relative bg-orange-500 rounded-md p-2 text-white hover:bg-red-600 hover:scale-110 text-lg"
+            class="relative bg-gradient-to-r bg-green-600 rounded-lg p-2 text-white hover:from-green-500 hover:to-blue-600 hover:scale-125 text-lg transition duration-700 ease-in-out"
           >
-            <div>สมัครแข่งขัน</div>
+            <div>
+              <a href="/Register" class="text-white">สมัครแข่งขัน</a>
+            </div>
           </button>
 
           <!--Resgister dropdown -->
