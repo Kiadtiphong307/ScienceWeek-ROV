@@ -5,7 +5,9 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 const navigation = [
   { name: 'รายละเอียดผการแข่งขัน', href: '/', current: true },
   
-  { name: 'ติดต่อ', href: '/Contact', current: false }
+  { name: 'ติดต่อ', href: '/Contact', current: false },
+
+  { name: 'อัพโหลดแบบฟอร์ม', href: '#', current: false }
 ]
 </script>
 
