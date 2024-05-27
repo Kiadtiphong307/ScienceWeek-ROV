@@ -9,7 +9,9 @@ const navigation = [
 
   { name: 'ประกาศรายชื่อทีม', href: '/Team', current: false },
 
-  { name: 'ติดต่อ', href: '/Contact', current: false }
+  { name: 'ติดต่อ', href: '/Contact', current: false },
+
+  { name: 'เกี่ยวกับเรา', href: '#reward', current: false }
 ]
 </script>
 
