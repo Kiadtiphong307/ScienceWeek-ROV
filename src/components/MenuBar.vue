@@ -4,7 +4,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu } from '@headlessui
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
 const navigation = [
-  { name: 'รายละเอียดการแข่งขัน', href: '/#banner', current: true },
+  { name: 'รายละเอียดการแข่งขัน', href: '/#register', current: true },
   { name: 'ประกาศรายชื่อทีม', href: '#', current: false },
   { name: 'ติดต่อ', href: '#contact', current: false }
 ]
@@ -57,7 +57,7 @@ const closeToast = () => {
                 :href="item.href"
                 @click.prevent="handleClick(item.href)"
                 :class="[
-                  'text-red-500 hover:bg-blue-500 hover:text-white hover:scale-75 transition duration-500 ease-in-out',
+                  'text-red-500 hover:bg-red-900 hover:text-white hover:scale-75 transition duration-500 ease-in-out',
                   'rounded-md px-3 py-2 text-lg font-medium '
                 ]"
                 :aria-current="item.current ? 'page' : undefined"

@@ -27,6 +27,7 @@ export default {
           <div class="mx-auto max-w-7xl sm:px-6 lg:px-4">
             <div class="mx-auto max-w-7xl rounded-lg">
               <!-- register menu -->
+
               <div class="register-menu" id="register">
                 <div class="pt-60 pb-64">
                   <div class="center">
@@ -270,7 +271,33 @@ export default {
                           href="https://docs.google.com/forms/d/e/1FAIpQLSesnYCK4IuDiIU0S8vhzvIRUh-wWZOt-6hiANgefEtOxFY85Q/viewform"
                           class="text-white"
                           target="_blank"
-                          >สมัครแข่งขันระดับทั่วไป
+                          >สมัครแข่งขันระดับทั่วไป(Online)
+                        </a>
+                      </div>
+                    </button>
+
+                    <button
+                      class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 text-lg transition duration-700 ease-in-out mx-4"
+                    >
+                      <div>
+                        <a
+                          href="https://drive.google.com/file/d/1nBEKoHr9fL_0m6b9HGpojpol9fv8UGV_/view?usp=drive_link"
+                          class="text-white"
+                          target="_blank"
+                          >สมัครแข่งขันระดับทั่วไป(PDF)
+                        </a>
+                      </div>
+                    </button>
+
+                    <button
+                      class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 text-lg transition duration-700 ease-in-out mx-4"
+                    >
+                      <div>
+                        <a
+                          href="https://docs.google.com/document/d/1YUZoHOxrWS13-97P033ujptCj1gKzdok/edit?usp=sharing&ouid=106158528617788086169&rtpof=true&sd=true"
+                          class="text-white"
+                          target="_blank"
+                          >สมัครแข่งขันระดับทั่วไป(Word)
                         </a>
                       </div>
                     </button>
@@ -466,24 +493,53 @@ export default {
                   <!-- button register มัธยม หริอปวช.-->
                   <div class="flex justify-left pt-6">
                     <!-- มัธยม หริอปวช. -->
+
                     <button
-                      class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 text-lg transition duration-700 ease-in-out mx-4"
+                      class="relative bg-gradient-to-r bg-blue-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 text-lg transition duration-700 ease-in-out mx-2"
+                    >
+                      <div>
+                        <a href="#" class="text-white" target="_blank">อัพโหลดแบบฟอร์ม </a>
+                      </div>
+                    </button>
+
+                    <button
+                      class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-2"
                     >
                       <div>
                         <a
                           href="https://docs.google.com/forms/d/e/1FAIpQLSevw6H0MsVRWEj0a_bxNl2_JGk7-JaP9A0nsUrNTfHlsz4W7g/viewform"
                           class="text-white"
                           target="_blank"
-                          >สมัครแข่งขันระดับม.ปลาย หรือปวช.
+                          >สมัครแข่งขันระดับม.ปลาย หรือปวช.(Online)
                         </a>
                       </div>
                     </button>
 
                     <button
-                      class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 text-lg transition duration-700 ease-in-out mx-4"
+                      class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-2"
                     >
                       <div>
-                        <a href="#" class="text-white" target="_blank">อัพโหลดแบบฟอร์ม </a>
+                        <a
+                          href="https://drive.google.com/file/d/1nBEKoHr9fL_0m6b9HGpojpol9fv8UGV_/view?usp=drive_link"
+                          class="text-white"
+                          target="_blank"
+                          >สมัครแข่งขันระดับม.ปลาย หรือปวช.(PDF)
+                        </a>
+                      </div>
+                    </button>
+                  </div>
+
+                  <div class="flex justify-left pt-6">
+                    <button
+                      class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-4"
+                    >
+                      <div>
+                        <a
+                          href="https://docs.google.com/document/d/1YUZoHOxrWS13-97P033ujptCj1gKzdok/edit?usp=sharing&ouid=106158528617788086169&rtpof=true&sd=true"
+                          class="text-white"
+                          target="_blank"
+                          >สมัครแข่งขันระดับม.ปลาย หรือปวช.(Word)
+                        </a>
                       </div>
                     </button>
                   </div>
@@ -493,7 +549,7 @@ export default {
           </div>
         </div>
 
-        <div class="" id="contact"></div>
+        <div class="pt-14" id="contact"></div>
         <div class="mx-auto max-w-6xl py-6 sm:px-6 lg:px-8">
           <div class="mx-auto max-w-6xl py-6 rounded-lg">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -509,7 +565,7 @@ export default {
                     <div>
                       คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ (คุณช่อทิพย์ สิทธิ์ หมายเลขโทรศัพท์
                       053-873890 ต่อ 25) ติดต่อวันและเวลาราชการ ประชาสัมพันธ์รายละเอียดที่เพจ
-                      <a href="https://www.facebook.com/computersciencemju"
+                      <a href="https://www.facebook.com/computersciencemju" target="_blank"
                         >วิทยาการคอมพิวเตอร์ ม.แม่โจ้</a
                       >
                     </div>
@@ -525,7 +581,11 @@ export default {
                       <div class="qr-code">
                         <img src="../assets/ระดับมอต้น.jpg" alt="QR Code" />
                       </div>
-                      <div><a href="https://maejo.link/Z2nd">https://maejo.link/Z2nd</a></div>
+                      <div>
+                        <a href="https://maejo.link/Z2nd" target="_blank"
+                          >https://maejo.link/Z2nd</a
+                        >
+                      </div>
                     </div>
 
                     <div class="contact-info">
@@ -535,7 +595,11 @@ export default {
                       <div class="qr-code">
                         <img src="../assets/ระดับทั่วไป.jpg" alt="QR Code" />
                       </div>
-                      <div><a href="https://maejo.link/k7hD">https://maejo.link/k7hD</a></div>
+                      <div>
+                        <a href="https://maejo.link/k7hD" target="_blank"
+                          >https://maejo.link/k7hD</a
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
