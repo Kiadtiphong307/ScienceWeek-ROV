@@ -2,6 +2,22 @@
 export default {
   name: 'CompetitionRules'
 }
+
+function countVisit() {
+  let visitCount = localStorage.getItem('visitCount')
+
+  if (visitCount === null) {
+    visitCount = 1
+  } else {
+    visitCount = parseInt(visitCount) + 1
+  }
+
+  document.getElementById('visit-count').textContent = visitCount
+
+  localStorage.setItem('visitCount', visitCount)
+}
+
+window.onload = countVisit
 </script>
 
 <template>
@@ -16,8 +32,8 @@ export default {
               <div class="overflow-hidden">
                 <a href="#register" title="click">
                   <img
-                    src="../assets/BannerRoV.svg"
-                    class="w-full h-full hover:scale-90 rounded-lg transition duration-1000 ease-in-out"
+                    src="../assets/Banner_qr.svg"
+                    class="w-full h-full scale-90 hover:scale-75 rounded-lg transition duration-1000 ease-in-out"
                   />
                 </a>
               </div>
@@ -30,14 +46,14 @@ export default {
 
               <div class="register-menu" id="register">
                 <div class="pt-60 pb-64">
-                  <div class="center">
-                    <p class="text-red-500 noto-sans-thai-bold text-7xl">E-Sports (ROV) 2024</p>
+                  <div class="center hover:scale-110 transition duration-1000 ease-in-out">
+                    <p class="text-red-500 noto-sans-thai-bold text-6xl">E-Sports Science Week67</p>
 
                     <p class="text-red-500 noto-sans-thai-bold text-5xl">
                       งานสัปดาห์วิทยาศาสตร์แห่งชาติ <br />ภาคเหนือตอนบน ประจำปี 2567
                     </p>
                     <p class="text-green-500 noto-sans-thai-bold text-xl">
-                      สาขาวิชาวิทยการคอมพิวเตอร์ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้
+                      สาขาวิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้
                     </p>
                   </div>
 
@@ -78,7 +94,7 @@ export default {
           <div class="mx-auto max-w-7xl rounded-lg">
             <!-- สมัครรูปแบบทั่วไป -->
             <div class="mx-auto max-w-5xl py-6 sm:px-6 lg:px-8">
-              <div class="mx-auto max-w-5xl py-6 shadow-lg rounded-lg">
+              <div class="mx-auto max-w-5xl py-6 rounded-lg">
                 <div class="section-title noto-sans-thai-bold">
                   1.รายละเอียดการแข่งขัน E-Sports (ROV) ประจำปี 2567 ระดับทั่วไป
                 </div>
@@ -135,7 +151,7 @@ export default {
                     </li>
                     <li>1.2.6 ผู้เข้าแข่งขัน 1 คน สามารถเข้าร่วมทีมได้เพียง 1 ทีมเท่านั้น</li>
                   </ul>
-                  <h2 class="noto-sans-thai-bold">1.3 สำหรับระดับทั่วไป</h2>
+                  <h2 class="noto-sans-thai-bold">1.3 เงินรางวัล และเกียรติบัตร(ระดับทั่วไป)</h2>
                   <table class="table-fixed">
                     <thead>
                       <tr>
@@ -161,7 +177,7 @@ export default {
                         <td>พร้อมใบประกาศเกียรติคุณและของที่ระลึกจากบริษัททรู</td>
                       </tr>
                       <tr>
-                        <td>รางวัลชมเชย</td>
+                        <td>รางวัลชมเชย 3 รางวัล</td>
                         <td>600 บาท</td>
                         <td>พร้อมใบประกาศเกียรติคุณและของที่ระลึกจากบริษัททรู</td>
                       </tr>
@@ -275,41 +291,14 @@ export default {
                         </a>
                       </div>
                     </button>
-
-                    <button
-                      class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 text-lg transition duration-700 ease-in-out mx-4"
-                    >
-                      <div>
-                        <a
-                          href="https://drive.google.com/file/d/1nBEKoHr9fL_0m6b9HGpojpol9fv8UGV_/view?usp=drive_link"
-                          class="text-white"
-                          target="_blank"
-                          >สมัครแข่งขันระดับทั่วไป(PDF)
-                        </a>
-                      </div>
-                    </button>
-
-                    <button
-                      class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 text-lg transition duration-700 ease-in-out mx-4"
-                    >
-                      <div>
-                        <a
-                          href="https://docs.google.com/document/d/1YUZoHOxrWS13-97P033ujptCj1gKzdok/edit?usp=sharing&ouid=106158528617788086169&rtpof=true&sd=true"
-                          class="text-white"
-                          target="_blank"
-                          >สมัครแข่งขันระดับทั่วไป(Word)
-                        </a>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
             </div>
 
             <div id="esports-highschool-vocational" class="pt-11"></div>
-            <!-- สมัครรูปแบบม.ปลาย และ ปวช. -->
             <div class="mx-auto max-w-5xl py-6 sm:px-6 lg:px-8">
-              <div class="mx-auto max-w-5xl py-6 shadow-lg rounded-lg">
+              <div class="mx-auto max-w-5xl py-6 rounded-lg">
                 <div class="section-title noto-sans-thai-bold">
                   2.รายละเอียดการแข่งขัน E-Sports (ROV) ประจำปี 2567 ระดับมัธยมศึกษาตอนปลาย หรือ
                   ระดับประกาศนียบัตรวิชาชีพ
@@ -363,7 +352,8 @@ export default {
                     <li>2.2.6 ผู้เข้าแข่งขัน 1 คน สามารถเข้าร่วมทีมได้เพียง 1 ทีมเท่านั้น</li>
                   </ul>
                   <h2 class="noto-sans-thai-bold">
-                    2.3 สำหรับระดับมัธยมศึกษาตอนปลาย หรือ ระดับประกาศนียบัตรวิชาชีพ
+                    2.3 เงินรางวัล และเกียรติบัตร (ระดับมัธยมศึกษาตอนปลาย หรือ
+                    ระดับประกาศนียบัตรวิชาชีพ)
                   </h2>
                   <table class="table-fixed">
                     <thead>
@@ -390,7 +380,7 @@ export default {
                         <td>พร้อมใบประกาศเกียรติคุณและของที่ระลึกจากบริษัททรู</td>
                       </tr>
                       <tr>
-                        <td>รางวัลชมเชย</td>
+                        <td>รางวัลชมเชย 3 รางวัล</td>
                         <td>600 บาท</td>
                         <td>พร้อมใบประกาศเกียรติคุณและของที่ระลึกจากบริษัททรู</td>
                       </tr>
@@ -422,12 +412,10 @@ export default {
                       <th>กิจกรรม</th>
                     </tr>
                     <tr>
-                      <td>วันที่ 1 มิถุนายน – 15 สิงหาคม 2567</td>
+                      <td>วันที่ 1 - 15 มิถุนายน 2567</td>
                       <td>
                         รับสมัครในระบบออนไลน์ผ่านเว็บไซต์
-                        <a href="http://www.nsru.ac.th" target="_blank"
-                          >สัปดาห์วิทยาศาสตร์แห่งชาติภาคเหนือออนไลน์ประจำปี 2567</a
-                        >
+                        <a target="_blank">สัปดาห์วิทยาศาสตร์แห่งชาติภาคเหนือออนไลน์ประจำปี 2567</a>
                         <span class="highlight"
                           >รับสมัครในระบบออนไลน์ผ่านเว็บไซต์
                           สัปดาห์วิทยาศาสตร์แห่งชาติภาคเหนือออนไลน์ประจำปี 2567
@@ -477,12 +465,12 @@ export default {
                       <td></td>
                     </tr>
                     <tr>
-                      <td>9.00-17.00 น.</td>
+                      <td>9.00-12.00 น.</td>
                       <td>ดำเนินการแข่งขัน E-Sports (ROV) ระดับทั่วไป</td>
                       <td></td>
                     </tr>
                     <tr>
-                      <td>17.00 น. เป็นต้นไป</td>
+                      <td>13.00 น. เป็นต้นไป</td>
                       <td>
                         คณะกรรมการตัดสินและประกาศผลการแข่งขันพร้อมมอบรางวัลและใบประกาศเกียรติคุณและของที่ระลึกจากบริษัทผู้ให้การสนับสนุน
                       </td>
@@ -491,16 +479,8 @@ export default {
                   </table>
 
                   <!-- button register มัธยม หริอปวช.-->
-                  <div class="flex justify-left pt-6">
+                  <div class="flex justify-left pt-6 space-x-4">
                     <!-- มัธยม หริอปวช. -->
-
-                    <button
-                      class="relative bg-gradient-to-r bg-blue-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 text-lg transition duration-700 ease-in-out mx-2"
-                    >
-                      <div>
-                        <a href="#" class="text-white" target="_blank">อัพโหลดแบบฟอร์ม </a>
-                      </div>
-                    </button>
 
                     <button
                       class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-2"
@@ -516,38 +496,31 @@ export default {
                     </button>
 
                     <button
-                      class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-2"
+                      class="relative bg-gradient-to-r bg-blue-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 text-lg transition duration-700 ease-in-out mx-2"
                     >
                       <div>
-                        <a
-                          href="https://drive.google.com/file/d/1nBEKoHr9fL_0m6b9HGpojpol9fv8UGV_/view?usp=drive_link"
-                          class="text-white"
-                          target="_blank"
-                          >สมัครแข่งขันระดับม.ปลาย หรือปวช.(PDF)
+                        <a href="https://maejo.link/fX6F" class="text-white" target="_blank"
+                          >อัพโหลดยืนยันสิทธิ์การสมัคร
                         </a>
                       </div>
                     </button>
                   </div>
 
-                  <div class="flex justify-left pt-6">
-                    <button
-                      class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-4"
-                    >
-                      <div>
-                        <a
-                          href="https://docs.google.com/document/d/1YUZoHOxrWS13-97P033ujptCj1gKzdok/edit?usp=sharing&ouid=106158528617788086169&rtpof=true&sd=true"
-                          class="text-white"
-                          target="_blank"
-                          >สมัครแข่งขันระดับม.ปลาย หรือปวช.(Word)
-                        </a>
-                      </div>
-                    </button>
-                  </div>
+                  <p class="text-red-500 pt-5">
+                    *** หมายเหตุ: อัพโหลดแบบฟอร์มใบสมัครเพื่อยืนยันการเข้า ร่วมแข่งขันภายใน 3
+                    วันหลังจากสมัครออนไลน์ โดยมีลายเซ็นอาจารย์ที่ปรึกษาทีม และ
+                    ลายเซ็นจากเจ้าของสถาบันรับรอง
+                    หากไม่ส่งใบสมัครยืนยันจะถือว่าสละสิทธิ์การเข้าร่วมแข่งขัน
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- </div>
+            </div>
+          </div>
+        </div> -->
 
         <div class="pt-14" id="contact"></div>
         <div class="mx-auto max-w-6xl py-6 sm:px-6 lg:px-8">
@@ -555,11 +528,12 @@ export default {
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
               <div class="mx-auto max-w-7xl rounded-lg">
                 <!-- conect open chat -->
+
                 <div class="section-title noto-sans-thai-bold">
                   สถานที่ติดต่อสอบถามและรับสมัครผ่านทาง ระบบออนไลน์
                 </div>
-                <div class="mx-auto max-w-5xl py-6 sm:px-6 shadow-lg lg:px-8 rounded-lg">
-                  <div class="mx-auto max-w-5xl py-6">
+                <div class="mx-8">
+                  <div>
                     <div>สัปดาห์วิทยาศาสตร์แห่งชาติภาคเหนือส่วนบนประจำปี 2567</div>
                     <div><strong>1. ภาคเหนือส่วนบน</strong></div>
                     <div>
@@ -568,37 +542,53 @@ export default {
                       <a href="https://www.facebook.com/computersciencemju" target="_blank"
                         >วิทยาการคอมพิวเตอร์ ม.แม่โจ้</a
                       >
-                    </div>
-                  </div>
 
-                  <p><strong>2. ช่องทางติดต่อสอบถาม</strong></p>
-
-                  <div class="flex justify-between">
-                    <div class="contact-info">
-                      <div>2.1 ระดับมัธยมศึกษาตอนปลาย หรือ ระดับประกาศนียบัตรวิชาชีพ</div>
-                      <div class="line-openchat">LINE OPENCHAT</div>
-                      <div>MjuScienceWeek E-Sport ม.ปลาย/ปวช.</div>
-                      <div class="qr-code">
-                        <img src="../assets/ระดับมอต้น.jpg" alt="QR Code" />
-                      </div>
-                      <div>
-                        <a href="https://maejo.link/Z2nd" target="_blank"
-                          >https://maejo.link/Z2nd</a
+                      <div class="mt-4">
+                        สัปดาห์วิทยาศาสตร์แห่งชาติภาคเหนือส่วนบนประจำปี 2567 1. ภาคเหนือส่วนบน
+                        คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ (คุย่อทิพย์ สิทธิ์ หมายเลขโทรศัพท์
+                        053-873890 ต่อ 25) ติดต่อวันและเวลาราชการ ประชาสัมพันธ์รายละเอียดที่เพจ
+                        <a href="https://example.com" target="_blank" class="text-blue-600"
+                          >วิทยาการคอมพิวเตอร์ ม.แม่โจ้</a
                         >
                       </div>
-                    </div>
 
-                    <div class="contact-info">
-                      <div>2.2 ระดับทั่วไป</div>
-                      <div class="line-openchat">LINE OPENCHAT</div>
-                      <p>True5G Esports Tournament 2024 สนามแข่งขันเชียงใหม่</p>
-                      <div class="qr-code">
-                        <img src="../assets/ระดับทั่วไป.jpg" alt="QR Code" />
-                      </div>
-                      <div>
-                        <a href="https://maejo.link/k7hD" target="_blank"
-                          >https://maejo.link/k7hD</a
-                        >
+                      <div class="mt-4">
+                        <div>2. ช่องทางติดต่อสอบถาม</div>
+                        <div class="flex flex-col md:flex-row justify-between mt-4">
+                          <div class="md:w-1/2">
+                            <div>2.1 ระดับมัธยมศึกษาตอนปลาย หรือ ระดับประกาศนียบัตรวิชาชีพ</div>
+                            <div class="text-green-600">LINE OPENCHAT</div>
+                            <div>MjuScienceWeek E-Sport ม.ปลาย/ปวช.</div>
+                            <div class="qr-code mt-2">
+                              <img src="../assets/QR_2.jpg" alt="QR Code" class="w-56 max-w-xs" />
+                            </div>
+                            <div>
+                              <a
+                                href="https://maejo.link/Z2nd"
+                                target="_blank"
+                                class="text-blue-600"
+                                >https://maejo.link/Z2nd</a
+                              >
+                            </div>
+                          </div>
+
+                          <div class="md:w-1/2">
+                            <div>2.2 ระดับทั่วไป</div>
+                            <div class="text-green-600">LINE OPENCHAT</div>
+                            <p>True5G Esports Tournament 2024 สนามแข่งขันเชียงใหม่</p>
+                            <div class="qr-code mt-2">
+                              <img src="../assets/QR_1.jpg " alt="QR Code" class="w-56 max-w-xs" />
+                            </div>
+                            <div>
+                              <a
+                                href="https://maejo.link/k7hD"
+                                target="_blank"
+                                class="text-blue-600"
+                                >https://maejo.link/k7hD</a
+                              >
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -609,26 +599,52 @@ export default {
         </div>
 
         <!-- หมายเหตุ -->
-        <p class="note center text-lg pt-2">
-          *** หมายเหตุ: ผู้ที่เข้าร่วมแข่งขันและอาจารย์ที่ปรึกษาระดับมัธยมศึกษาตอนปลาย หรือ
-          ระดับประกาศนียบัตรวิชาชีพที่ได้รับรางวัลใบประกาศเกียรติคุณสามารถติดต่อขอทำบัตรนักกีฬาระดับชาติได้ภายในงาน
-          หรือภายหลังผ่านเว็บไซต์ของสาขาวิทยาการคอมพิวเตอร์ ชั้น 6 อาคารเฉลิมพระเกียรติ 60 ปี
-          คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ ในเวลาราชการ หรือส่งคำขอรับทางไปรษณีย์ถึงให้ทางสาขาฯ ***
-        </p>
-        <!-- ปล. -->
-        <p class="center pt-6">
-          *** แผนการดำเนินการอาจมีการเปลี่ยนแปลงได้ตามความเหมาะสม ขอความกรุณาผู้เข้าร่วมแข่งขัน
-          โปรดติดต่อทางผู้จัดของแต่ละศูนย์ภาค ***
-        </p>
+        <div class="mx-auto max-w-6xl sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-6xl rounded-lg">
+            <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+              <div class="mx-auto max-w-7xl rounded-lg">
+                <div class="mx-8">
+                  <p class="note center text-lg pt-2">
+                    *** หมายเหตุ: ผู้ที่เข้าร่วมแข่งขันและอาจารย์ที่ปรึกษาระดับมัธยมศึกษาตอนปลาย
+                    หรือ
+                    ระดับประกาศนียบัตรวิชาชีพที่ได้รับรางวัลใบประกาศเกียรติคุณสามารถติดต่อขอทำบัตรนักกีฬาระดับชาติได้ภายในงาน
+                    หรือภายหลังผ่านเว็บไซต์ของสาขาวิทยาการคอมพิวเตอร์ ชั้น 6 อาคารเฉลิมพระเกียรติ 60
+                    ปี คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ ในเวลาราชการ
+                    หรือส่งคำขอรับทางไปรษณีย์ถึงให้ทางสาขาฯ ***
+                  </p>
+                </div>
+                <!-- ปล. -->
+                <div>
+                  <div class="mx-8">
+                    <p class="center pt-4 text-xl">
+                      *** แผนการดำเนินการอาจมีการเปลี่ยนแปลงได้ตามความเหมาะสม
+                      ขอความกรุณาผู้เข้าร่วมแข่งขัน <br />โปรดติดต่อทางผู้จัดของแต่ละศูนย์ภาค ***
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 
   <!-- footer -->
-  <div>
-    <footer class="text-center font-bold mt-6 pt-5 pb-5 bg-red-600 py-2 text-white text-2xl">
-      ติดต่อสอบถามรายละเอียดได้ที่ผู้ประสานงานฝ่ายการแข่งขัน<br />
-      นางสาวช่อทิพย์ สิทธิ 053-873890 ต่อ25 หรือ inbox ทางเพจ วิทยาการคอมพิวเตอร์ ม.แม่โจ้
+  <div class="pt-20">
+    <div class="mx-2">
+      <p>จำนวนผู้เข้าชมเว็บไซต์นี้: <span id="visit-count">0</span></p>
+    </div>
+
+    <footer class="text-center font-bold pt-6 pb-6 bg-red-600 py-2 text-white text-2xl">
+      <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl rounded-lg">
+          <div class="mx-4 text-xl">
+            ติดต่อสอบถามรายละเอียดได้ที่ผู้ประสานงานฝ่ายการแข่งขัน<br />
+            นางสาวช่อทิพย์ สิทธิ 053-873890 ต่อ25 หรือ inbox ทางเพจ วิทยาการคอมพิวเตอร์ ม.แม่โจ้
+          </div>
+        </div>
+      </div>
     </footer>
   </div>
 </template>

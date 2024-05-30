@@ -6,7 +6,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 const navigation = [
   { name: 'รายละเอียดการแข่งขัน', href: '/#register', current: true },
   { name: 'ประกาศรายชื่อทีม', href: '#', current: false },
-  { name: 'ติดต่อ', href: '#contact', current: false }
+  { name: 'ติดต่อ', href: '#contact', current: false },
+  { name: 'ยืนยันสิทธิ์การแข่งขัน', href: 'https://maejo.link/fX6F', current: false }
 ]
 
 const showToast = ref(false)
@@ -26,7 +27,7 @@ const closeToast = () => {
 </script>
 
 <template>
-  <Disclosure as="nav" class="bg-white shadow-lg" v-slot="{ open }">
+  <Disclosure as="nav" class="bg-white shadow-lg text-sm" v-slot="{ open }">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 h-20">
       <div class="relative flex h-20 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -40,12 +41,14 @@ const closeToast = () => {
             <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
           </DisclosureButton>
         </div>
+
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="flex flex-shrink-0 items-center">
-            <img class="h-10 w-auto" src="../assets/LOGO.png" />
-            <div class="pl-5">E-Sports Science Week</div>
+          <div class="flex-shrink-0 flex items-center">
+            <img class="h-14 w-auto" src="../assets/LOGO.png" />
+            <div class="pl-5 w-auto hidden lg:block">E-Sports Science Week</div>
           </div>
         </div>
+
         <div
           class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
         >

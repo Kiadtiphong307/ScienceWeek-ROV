@@ -1,4 +1,4 @@
-(function() {
+;(function () {
   const debounce = (fn, delay) => {
     let timeoutId = null
     return () => {
@@ -13,19 +13,19 @@
       if (!waiting) {
         fn()
         waiting = true
-        setTimeout(() => waiting = false, delay)
+        setTimeout(() => (waiting = false), delay)
       }
     }
   }
 
-  const reset = element => {
+  const reset = (element) => {
     if (element.className !== element.dataset.taosClass) {
       element.className = element.dataset.taosClass
     }
   }
-  const before = element => element.className = element.className.replaceAll('taos:', '')
+  const before = (element) => (element.className = element.className.replaceAll('taos:', ''))
 
-  const initElement = element => {
+  const initElement = (element) => {
     if (!element.className.includes('taos-init')) {
       element.dataset.taosClass = element.className + ' taos-init'
       reset(element)
@@ -45,23 +45,26 @@
   let scrollY = window.scrollY
 
   const refreshTriggers = throttle(() => {
-    elements.forEach(el => el.trigger = el.element.getBoundingClientRect().top - window.innerHeight  + el.offset + scrollY)
+    elements.forEach(
+      (el) =>
+        (el.trigger =
+          el.element.getBoundingClientRect().top - window.innerHeight + el.offset + scrollY)
+    )
   }, 250)
 
   const refresh = () => {
     elements = []
-    document.querySelectorAll('[class*="taos"]').forEach(el => elements.push(initElement(el)))
+    document.querySelectorAll('[class*="taos"]').forEach((el) => elements.push(initElement(el)))
     refreshTriggers()
     requestAnimationFrame(handleScroll)
   }
 
   const handleScroll = () => {
     scrollY = window.scrollY
-    elements.forEach(({element, trigger, once}) => {
+    elements.forEach(({ element, trigger, once }) => {
       if (trigger < scrollY) {
         reset(element)
-      }
-      else if (!once && element.className.includes('taos:')) {
+      } else if (!once && element.className.includes('taos:')) {
         before(element)
       }
     })
@@ -80,12 +83,16 @@
   addEventListener('orientationchange', refresh)
   addEventListener('resize', debounce(handleResize, 250))
 
-  const observer = new MutationObserver(mutations => {
-    mutations.forEach(({target}) => {
-      if (target.className && !target.className.includes('taos-init') && target.className.includes('taos:')) {
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach(({ target }) => {
+      if (
+        target.className &&
+        !target.className.includes('taos-init') &&
+        target.className.includes('taos:')
+      ) {
         elements.push(initElement(target))
       }
     })
   })
-  observer.observe(document, {attributes: true, childList: true, subtree: true})
+  observer.observe(document, { attributes: true, childList: true, subtree: true })
 })()
