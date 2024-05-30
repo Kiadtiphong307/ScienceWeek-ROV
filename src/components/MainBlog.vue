@@ -45,7 +45,7 @@ window.onload = countVisit
               <!-- register menu -->
 
               <div class="register-menu" id="register">
-                <div class="pt-60 pb-64">
+                <div class="pt-52 pb-48">
                   <div class="center hover:scale-110 transition duration-1000 ease-in-out">
                     <p class="text-red-500 noto-sans-thai-bold text-6xl">E-Sports Science Week67</p>
 
