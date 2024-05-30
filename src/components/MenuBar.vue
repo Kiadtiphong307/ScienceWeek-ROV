@@ -16,7 +16,6 @@ const handleClick = (href) => {
   if (href === '#' || href === '') {
     showToast.value = true
   } else {
-    // นำผู้ใช้ไปยังหน้าที่ต้องการหาก href ไม่เป็น "#"
     window.location.href = href
   }
 }
@@ -61,7 +60,7 @@ const closeToast = () => {
                 @click.prevent="handleClick(item.href)"
                 :class="[
                   'text-red-500 hover:bg-red-900 hover:text-white hover:scale-75 transition duration-500 ease-in-out',
-                  'rounded-md px-3 py-2 text-lg font-medium '
+                  'rounded-md px-3 py-2 text-lg  '
                 ]"
                 :aria-current="item.current ? 'page' : undefined"
                 >{{ item.name }}</a
@@ -107,45 +106,39 @@ const closeToast = () => {
 
   <!-- Toast Notification -->
   <transition
-    enter-active-class="transition ease-out duration-300"
-    enter-from-class="transform opacity-0 translate-y-4"
-    enter-to-class="transform opacity-100 translate-y-0"
-    leave-active-class="transition ease-in duration-300"
-    leave-from-class="transform opacity-100 translate-y-0"
-    leave-to-class="transform opacity-0 translate-y-4"
-  >
-    <div
-      v-if="showToast"
-      class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-75"
-    >
-      <div class="bg-white rounded-lg p-6 text-center shadow-xl">
-        <div class="flex justify-center mb-4">
-          <div class="bg-red-100 rounded-full p-3">
-            <svg
-              class="h-6 w-6 text-red-500"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </div>
+  enter-active-class="transition ease-out duration-300"
+  enter-from-class="transform opacity-0 translate-y-4"
+  enter-to-class="transform opacity-100 translate-y-0"
+  leave-active-class="transition ease-in duration-300"
+  leave-from-class="transform opacity-100 translate-y-0"
+  leave-to-class="transform opacity-0 translate-y-4"
+>
+  <div v-if="showToast" class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-75">
+    <div class="bg-white rounded-lg p-6 text-center shadow-xl">
+      <div class="flex justify-center mb-4">
+        <div class="bg-red-100 rounded-full p-3">
+          <svg
+            class="h-6 w-6 text-red-500"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
         </div>
-        <h2 class="text-xl text-gray-800">Error</h2>
-        <p class="mt-2 text-gray-600 text-xl">รอประกาศรายชื่อทีมแข่งขัน เร็วๆนี้</p>
-        <button
-          @click="closeToast"
-          class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"
-        >
-          OK
-        </button>
       </div>
+      <h2 class="text-xl text-gray-800">Coming Soon</h2>
+      <p class="mt-2 text-gray-600 text-xl">รอประกาศรายชื่อทีมแข่งขัน เร็วๆนี้</p>
+      <button @click="closeToast" class="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600">
+        OK
+      </button>
     </div>
-  </transition>
+  </div>
+</transition>
 </template>
