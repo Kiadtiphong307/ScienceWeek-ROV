@@ -3,21 +3,6 @@ export default {
   name: 'CompetitionRules'
 }
 
-function countVisit() {
-  let visitCount = localStorage.getItem('visitCount')
-
-  if (visitCount === null) {
-    visitCount = 1
-  } else {
-    visitCount = parseInt(visitCount) + 1
-  }
-
-  document.getElementById('visit-count').textContent = visitCount
-
-  localStorage.setItem('visitCount', visitCount)
-}
-
-window.onload = countVisit
 </script>
 
 <template>
@@ -632,9 +617,9 @@ window.onload = countVisit
 
   <!-- footer -->
   <div class="pt-20">
-    <div class="mx-2">
+    <!-- <div class="mx-2">
       <p>จำนวนผู้เข้าชมเว็บไซต์นี้: <span id="visit-count">0</span></p>
-    </div>
+    </div> -->
 
     <footer class="text-center font-bold pt-6 pb-6 bg-red-600 py-2 text-white text-2xl">
       <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
