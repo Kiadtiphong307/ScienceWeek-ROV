@@ -101,7 +101,7 @@
   <div>
     <main>
       <div id="banner"></div>
-      <div class="pt-24 pb-10">
+      <div class="pt-20 pb-10">
         <div class="mx-auto max-w-6xl sm:px-6 lg:px-4">
           <div class="mx-auto max-w-6xl rounded-lg">
             <!-- image banner -->
@@ -109,18 +109,18 @@
               <div class="mx-auto max-w-7xl rounded-lg">
                 <!-- slide -->
                 <div class="slideshow-container">
-                  <div class="overflow-hidden">
-                    <div class="slides fade">
+                  <div class="overflow-hidden  ">
+                    <div class="slides fade ">
                       <button onclick="scrollToRegister()">
                         <img src="src/assets/Banner_qr.svg"
-                          class="slide-image scale-90 hover:scale-75 rounded-lg transition duration-1000 ease-in-out">
+                          class="slide-image scale-90  hover:scale-75 rounded-lg transition duration-1000 ease-in-out w-full h-full">
                       </button>
                     </div>
 
-                    <div class="slides fade">
+                    <div class="slides fade" >
                       <button onclick="scrollToRegister()">
                         <img src="src/assets/Banner_true.jpg"
-                          class="slide-image scale-90 hover:scale-75 rounded-lg transition duration-1000 ease-in-out">
+                          class="slide-image scale-90 hover:scale-75 rounded-lg transition duration-1000 ease-in-out w-full h-full">
                       </button>
                     </div>
                   </div>
@@ -140,7 +140,7 @@
             <div class="mx-auto max-w-7xl rounded-lg">
               <!-- register menu -->
 
-              <div id="register" class="register-menu">
+              <div id="register" class="register-menu" >
                 <div class="pt-52 pb-48">
                   <div class="center hover:scale-110 transition duration-1000 ease-in-out">
                     <p class="text-red-500 noto-sans-thai-bold text-6xl">
@@ -176,6 +176,8 @@
                   </div>
                 </div>
               </div>
+
+
             </div>
           </div>
         </div>
@@ -583,7 +585,7 @@
                   <!-- มัธยม หริอปวช. -->
 
                   <button
-                    class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-2">
+                    class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-2 text-lg">
                     <div>
                       <a href="https://docs.google.com/forms/d/e/1FAIpQLSevw6H0MsVRWEj0a_bxNl2_JGk7-JaP9A0nsUrNTfHlsz4W7g/viewform"
                         class="text-white" target="_blank">สมัครแข่งขันระดับม.ปลาย หรือปวช.(Online)
@@ -592,7 +594,7 @@
                   </button>
 
                   <button
-                    class="relative bg-gradient-to-r bg-blue-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 text-lg transition duration-700 ease-in-out mx-2">
+                    class="relative bg-gradient-to-r bg-blue-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 text-lg transition duration-700 ease-in-out mx-2 ">
                     <div>
                       <a href="https://maejo.link/fX6F" class="text-white" target="_blank">อัพโหลดยืนยันสิทธิ์การสมัคร
                       </a>
@@ -988,6 +990,7 @@
   }
 </script>
 
+
 <style>
   .slideshow-container {
     position: relative;
@@ -1018,4 +1021,30 @@
       opacity: 1
     }
   }
+
+  @media screen and (max-width: 500px) {
+    #register .text-6xl {
+      font-size: 1.5rem; 
+    }
+  
+    #register .text-5xl {
+      font-size: 1.5rem; 
+    }
+  
+    #register .text-xl {
+      font-size: 0.75rem; 
+    }
+  
+    #register .text-lg {
+      font-size: 0.5rem; 
+    }
+  
+    #register .p-2 {
+      padding: 0.25rem; 
+    }
+
+
+    
+  }
+  
 </style>
