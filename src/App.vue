@@ -5,12 +5,12 @@ import Menu from '@/components/MenuBar.vue'
 
 <template>
   <div class="noto-sans-thai-sans">
-    <div class="navbar"> 
+    <div class="navbar">
       <Menu />
     </div>
 
-  <RouterView />
-</div>
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>

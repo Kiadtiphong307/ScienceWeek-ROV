@@ -2,7 +2,6 @@
 export default {
   name: 'CompetitionRules'
 }
-
 </script>
 
 <template>
@@ -615,11 +614,6 @@ export default {
     </div>
   </main>
 
-  <!-- footer -->
-  <div class="pt-20">
-    <!-- <div class="mx-2">
-      <p>จำนวนผู้เข้าชมเว็บไซต์นี้: <span id="visit-count">0</span></p>
-    </div> -->
 
     <footer class="text-center font-bold pt-6 pb-6 bg-red-600 py-2 text-white text-2xl">
       <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -634,97 +628,4 @@ export default {
   </div>
 </template>
 
-<style>
-.section-title {
-  color: red;
-  font-size: 24px;
-  margin-bottom: 16px;
-  font-weight: bold;
-}
-
-h2 {
-  font-size: 20px;
-  margin-top: 16px;
-  margin-bottom: 8px;
-}
-
-p {
-  margin: 8px 0;
-}
-
-.highlight-red {
-  color: red;
-}
-
-ol,
-ul {
-  margin-left: 20px;
-}
-
-ul {
-  list-style-type: disc;
-}
-
-li {
-  margin-bottom: 8px;
-}
-.prizes-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 16px;
-}
-
-.prizes-table th,
-.prizes-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-.prizes-table th {
-  background-color: #f2f2f2;
-  text-align: left;
-}
-
-.highlight-red {
-  color: red;
-  margin-top: 16px;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-.section-title {
-  background-color: yellow;
-  font-weight: bold;
-  padding: 10px;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-th {
-  background-color: #f2f2f2;
-}
-.important-dates {
-  color: red;
-  font-weight: bold;
-}
-a {
-  color: blue;
-}
-
-.note {
-  color: red;
-  font-weight: bold;
-}
-.center {
-  text-align: center;
-}
-</style>
+<style></style>
