@@ -581,11 +581,11 @@
                 </table>
 
                 <!-- button register มัธยม หริอปวช.-->
-                <div class="flex justify-left pt-6 space-x-4">
+                <div class="flex justify-left pt-6 space-x-5">
                   <!-- มัธยม หริอปวช. -->
 
                   <button
-                    class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-2 text-lg">
+                    class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-2 ">
                     <div>
                       <a href="https://docs.google.com/forms/d/e/1FAIpQLSevw6H0MsVRWEj0a_bxNl2_JGk7-JaP9A0nsUrNTfHlsz4W7g/viewform"
                         class="text-white" target="_blank">สมัครแข่งขันระดับม.ปลาย หรือปวช.(Online)
@@ -594,7 +594,18 @@
                   </button>
 
                   <button
-                    class="relative bg-gradient-to-r bg-blue-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 text-lg transition duration-700 ease-in-out mx-2 ">
+                  class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-2 ">
+                  <div>
+                    <a href="https://docs.google.com/document/d/1YUZoHOxrWS13-97P033ujptCj1gKzdok/edit?usp=drive_link&ouid=106158528617788086169&rtpof=true&sd=true"
+                      class="text-white" target="_blank">แบบฟอร์มใบสมัครระดับม.ปลาย หรือปวช.(DOCX)
+                    </a>
+                  </div>
+                </button>
+
+
+                  
+                  <button
+                    class="relative bg-gradient-to-r bg-blue-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-2 ">
                     <div>
                       <a href="https://maejo.link/fX6F" class="text-white" target="_blank">อัพโหลดยืนยันสิทธิ์การสมัคร
                       </a>
@@ -603,7 +614,7 @@
                 </div>
 
                 <p class="text-red-500 pt-5">
-                  *** หมายเหตุ: อัพโหลดแบบฟอร์มใบสมัครเพื่อยืนยันการเข้า ร่วมแข่งขันภายใน 3
+                  *** หมายเหตุ: หลังจากสมัครออนไลน์ให้ อัพโหลดแบบฟอร์มใบสมัครเพื่อยืนยันการเข้า ร่วมแข่งขันภายใน 3
                   วันหลังจากสมัครออนไลน์ โดยมีลายเซ็นอาจารย์ที่ปรึกษาทีม และ
                   ลายเซ็นจากเจ้าของสถาบันรับรอง
                   หากไม่ส่งใบสมัครยืนยันจะถือว่าสละสิทธิ์การเข้าร่วมแข่งขัน
@@ -719,9 +730,6 @@
 
   <!-- footer -->
   <div class="pt-20">
-    <!-- <div class="mx-2">
-      <p>จำนวนผู้เข้าชมเว็บไซต์นี้: <span id="visit-count">0</span></p>
-    </div> -->
 
     <footer class="text-center font-bold pt-6 pb-6 bg-red-600 py-2 text-white text-2xl">
       <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -902,22 +910,25 @@
 <!--count  -->
 <script>
   function countVisit() {
-    let visitCount = localStorage.getItem('visitCount')
-
+    // Retrieve visit count from localStorage
+    let visitCount = localStorage.getItem('visitCount');
+    
+    // Check if visitCount is null or not
     if (visitCount === null) {
-      visitCount = 1
+      visitCount = 1; // Initialize to 1 if null (first visit)
     } else {
-      visitCount = parseInt(visitCount) + 1
+      visitCount = parseInt(visitCount) + 1; // Increment the visit count
     }
 
-    document.getElementById('visit-count').textContent = visitCount
+    // Store the updated visit count back to localStorage
+    localStorage.setItem('visitCount', visitCount);
 
-    localStorage.setItem('visitCount', visitCount)
-
-    console.log('Visit Count:', visitCount)
+    // Log the visit count to the console
+    console.log('Visit Count:', visitCount);
   }
 
-  window.onload = countVisit
+  // Attach the countVisit function to window.onload
+  window.onload = countVisit;
 </script>
 
 <!-- เมนู -->
