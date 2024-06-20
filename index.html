@@ -50,12 +50,12 @@
                   <a href="#detail"
                     class="text-red-500 hover:bg-red-900 hover:text-white hover:scale-75 hover:transition hover:duration-500 ease-in-out rounded-md px-3 py-2 text-lg"
                     aria-current="page">รายละเอียดการแข่งขัน</a>
-                  <a href="#"
+                  <a href="#team"
                     class="text-red-500 hover:bg-red-900 hover:text-white hover:scale-75 transition duration-500 ease-in-out rounded-md px-3 py-2 text-lg">ประกาศรายชื่อทีม</a>
                   <a href="#contact"
                     class="text-red-500 hover:bg-red-900 hover:text-white hover:scale-75 transition duration-500 ease-in-out rounded-md px-3 py-2 text-lg">ติดต่อ</a>
-                  <a href="https://maejo.link/fX6F" target="_blank"
-                    class="text-red-500 hover:bg-red-900 hover:text-white hover:scale-75 transition duration-500 ease-in-out rounded-md px-3 py-2 text-lg">ยืนยันสิทธิ์การแข่งขัน</a>
+                  <!-- <a href="https://maejo.link/fX6F" target="_blank"
+                    class="text-red-500 hover:bg-red-900 hover:text-white hover:scale-75 transition duration-500 ease-in-out rounded-md px-3 py-2 text-lg">ยืนยันสิทธิ์การแข่งขัน</a> -->
                 </div>
               </div>
             </div>
@@ -71,8 +71,8 @@
               class="text-black hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">ประกาศรายชื่อทีม</a>
             <a href="#contact"
               class="text-black hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">ติดต่อ</a>
-            <a href="https://maejo.link/fX6F" target="_blank"
-              class="text-black hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">ยืนยันสิทธิ์การแข่งขัน</a>
+            <!-- <a href="https://maejo.link/fX6F" target="_blank"
+              class="text-black hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">ยืนยันสิทธิ์การแข่งขัน</a> -->
           </div>
         </div>
       </nav>
@@ -112,7 +112,7 @@
                   <div class="overflow-hidden  ">
                     <div class="slides fade ">
                       <button onclick="scrollToRegister()">
-                        <img src="src/assets/B_true.jpg"
+                        <img src="src\assets\S_Rov_ture.jpg"
                           class="slide-image scale-90  hover:scale-75 rounded-lg transition duration-1000 ease-in-out w-full h-full">
                       </button>
                     </div>
@@ -167,13 +167,17 @@
                     </button>
                     <!-- ระดับมัธยม และ ปวช. -->
                     <button
-                      class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 text-lg transition duration-700 ease-in-out mx-4">
-                      <div class="">
-                        <a href="https://maejo.link/Sfo0" class="text-white" target="_blank">สมัครแข่งขันระดับม.ปลาย
-                          หรือปวช.</a>
-                      </div>
-                    </button>
+                    class="relative bg-red-500 rounded-lg p-2 text-white hover:scale-110 text-lg transition duration-700 ease-in-out mx-4 cursor-not-allowed flex items-center space-x-2  hover:bg-red-900">
+                    <div class="bg-red-100 rounded-full p-1.5 ">
+                      <svg class="h-6 w-6 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </div>
+                    <span class="text-white">ปิดรับสมัครการแข่งขันในระดับม.ปลายหรือ ปวช.</span>
+                  </button>
                   </div>
+
+
                 </div>
               </div>
 
@@ -183,6 +187,30 @@
         </div>
       </div>
   </div>
+  
+
+  <!-- ประกาศรายชื่อ -->
+  <div id="team"></div>  
+  <div class="pt-24" >
+        <div class="mx-auto max-w-5xl sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-5xl rounded-lg">
+            <div class="section-title noto-sans-thai-bold center pl-10">
+                ระดับมัธยมศึกษาตอนปลาย หรือ ระดับประกาศนียบัตรวิชาชีพ
+              </div>
+              <div>
+              <img src="src/assets/team.png"
+              class="slide-image scale-100  rounded-lg transition duration-1000 ease-in-out w-full h-full">
+            </div>
+            </div>
+          </div>
+        </div>
+  </div> 
+
+
+
+
+
+
 
   <div id="detail"></div>
   <div id="esports-general"></div>
@@ -585,32 +613,14 @@
                   <!-- มัธยม หริอปวช. -->
 
                   <button
-                    class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-2 ">
-                    <div>
-                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSevw6H0MsVRWEj0a_bxNl2_JGk7-JaP9A0nsUrNTfHlsz4W7g/viewform"
-                        class="text-white" target="_blank">สมัครแข่งขันระดับม.ปลาย หรือปวช.(Online)
-                      </a>
-                    </div>
-                  </button>
-
-                  <button
-                  class="relative bg-gradient-to-r bg-green-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-2 ">
-                  <div>
-                    <a href="https://docs.google.com/document/d/1YUZoHOxrWS13-97P033ujptCj1gKzdok/edit?usp=drive_link&ouid=106158528617788086169&rtpof=true&sd=true"
-                      class="text-white" target="_blank">แบบฟอร์มใบสมัครระดับม.ปลาย หรือปวช.(DOCX)
-                    </a>
+                  class="relative bg-red-500 rounded-lg p-2 text-white hover:scale-110 text-lg transition duration-700 ease-in-out mx-4 cursor-not-allowed flex items-center space-x-2  hover:bg-red-900">
+                  <div class="bg-red-100 rounded-full p-1.5 ">
+                    <svg class="h-6 w-6 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
                   </div>
+                  <span class="text-white">ปิดรับสมัครการแข่งขันในระดับม.ปลายหรือ ปวช.</span>
                 </button>
-
-
-                  
-                  <button
-                    class="relative bg-gradient-to-r bg-blue-500 rounded-lg p-2 text-white hover:from-blue-600 hover:to-violet-600 hover:scale-110 transition duration-700 ease-in-out mx-2 ">
-                    <div>
-                      <a href="https://maejo.link/fX6F" class="text-white" target="_blank">อัพโหลดยืนยันสิทธิ์การสมัคร
-                      </a>
-                    </div>
-                  </button>
                 </div>
 
                 <p class="text-red-500 pt-5">
