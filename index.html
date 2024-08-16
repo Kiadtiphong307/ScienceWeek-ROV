@@ -78,7 +78,7 @@
       </nav>
 
       <!-- Toast Notification -->
-      <div id="toast" class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-75 hidden">
+      <!-- <div id="toast" class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-75 hidden">
         <div class="bg-white rounded-lg p-6 text-center shadow-xl">
           <div class="flex justify-center mb-4">
             <div class="bg-red-100 rounded-full p-3">
@@ -94,7 +94,7 @@
             OK
           </button>
         </div>
-      </div>
+      </div> -->
     </body>
   </div>
   <!-- MainBlog -->
@@ -204,14 +204,22 @@
             </div>
             </div>
           </div>
-        </div>
-  </div> 
 
-
-
-
-
-
+        <div class="pt-16">
+          <!-- ประกาศรายชื่อทีมสละสิทธิ์ -->
+          <div class="mx-auto max-w-5xl sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-5xl rounded-lg">
+              <div class="section-title noto-sans-thai-bold center pl-10">
+                  ประกาศรายชื่อทีมแข่งขันเพิ่มเติม <br> ระดับมัธยมศึกษาตอนปลาย หรือ ระดับประกาศนียบัตรวิชาชีพ
+                </div>
+                <div>
+                <img src="src/assets/TeamC.jpg"
+                class="slide-image scale-100  rounded-lg transition duration-1000 ease-in-out w-full h-full">
+              </div>
+              </div>
+            </div>
+          </div>
+  </div>
 
   <div id="detail"></div>
   <div id="esports-general"></div>
@@ -588,7 +596,7 @@
                   </tr>
                   <tr>
                     <td>9.00-12.00 น.</td>
-                    <td>ดำเนินการแข่งขัน E-Sports (ROV) ระดับทั่วไป</td>
+                    <td>ดำเนินการแข่งขัน E-Sports (ROV)  ระดับมัธยมศึกษาตอนปลาย หรือ ระดับประกาศนียบัตรวิชาชีพ </td>
                     <td></td>
                   </tr>
                   <tr>
@@ -862,6 +870,13 @@
     padding: 10px;
   }
 
+  .section_title_hot
+  {
+    background-color: red;
+    font-weight: bold;
+    padding: 10px;
+  }
+
   table {
     width: 100%;
     border-collapse: collapse;
@@ -1005,6 +1020,11 @@
 
 
 <style>
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   .slideshow-container {
     position: relative;
     max-width: 100%;
