@@ -1,7 +1,7 @@
 # Development
-HTML5
-Javascript
-CSS : Tailwind
+* HTML5
+* Javascript
+* CSS : Tailwind
 
 # GET Start
 1. Git Clone
